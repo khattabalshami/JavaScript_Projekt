@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EC-Book</title>
+</head>
+
+<body>
+    <center>
+        <div class="myModal" id="myModal">
+            <div class="modal-content">
+                <div class="modalImg">
+                </div>
+                <button class="close" onclick="modalClose();">Stäng</button>
+            </div>
+        </div>
+    </center>
+    <nav>
+        <div class="left-nav">
+            <img src="./images/logo.png" alt="logo-img" class="logo">
+            <ul>
+                <li>
+                    <img src="./images/notification.png" alt="Notification">
+                </li>
+                <li>
+                    <img src="./images/inbox.png" alt="Notification">
+                </li>
+                <li>
+                    <img src="./images/video.png" alt="Notification">
+                </li>
+            </ul>
+        </div>
+        <div class="Right-nav">
+            <div class="s-box">
+                <img src="./images/search.png" alt="search">
+                <input type="text" placeholder="Search.......">
+            </div>
+            <div class="users-profile online" id="myStatus">
+                <img src="./images/myProfilePhoto.jpg" alt="my profile photo">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="sid-left">
+            <div class="links">
+                <a href="#">
+                    <img src="./images/news.png" alt="">
+                    Nyheter
+                </a>
+                <a href="#">
+                    <img src="./images/friends.png" alt="">
+                    Vänner
+                </a>
+                <a href="#">
+                    <img src="./images/group.png" alt="">
+                    Grupper
+                </a>
+                <a href="#">
+                    <img src="./images/watch.png" alt="">
+                    Titta på
+                </a>
+                <a href="#">See More</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="s-gallary">
+                <div class="story s1">
+                    <img src="./images/upload.png" alt="">
+                    <p>Skapa händelse</p>
+                </div>
+                <div class="story s2  offline" id="nicoleStatus">
+                    <img src="./images/member-1.png" alt="" class="online">
+                    <p>Nicole</p>
+                </div>
+                <div class="story s3 online" id="aliStatus">
+                    <img src="./images/member-2.png" alt="" class="online">
+                    <p>Ali</p>
+                </div>
+                <div class="story s4 offline" id="saraStatus">
+                    <img src="./images/member-3.png" alt="" class="online">
+                    <p>Sara</p>
+                </div>
+            </div>
+            <div class="control">
+                <h3>Jag</h3><button onclick="iOnline();">Online</button><button
+                    onclick="iOffline();">Offline</button><button onclick="showMyStory();">visa
+                    händelsen</button><br><br>
+                <h3>Nicole</h3><button onclick="nicoleOnline();">Online</button><button
+                    onclick="nicoleOffline();">Offline</button><button onclick="showNicoleStory();">Visa
+                    händelse</button><br><br>
+                <h3>Ali</h3><button onclick="aliOnline();">Online</button><button
+                    onclick="aliOffline();">Offline</button><button onclick="showAliStory();">Visa
+                    händelse</button><br><br>
+                <h3>Sara</h3><button onclick="saraOnline();">Online</button><button
+                    onclick="saraOffline();">Offline</button><button onclick="showSaraStory();">Visa händelse</button>
+            </div>
+        </div>
+        <div class="sid-right"></div>
+    </div>
+    <script src="./JS_Fil.js"></script>
+</body>
+
+</html>

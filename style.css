@@ -1,0 +1,270 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+body {
+	background-color: rgb(200, 200, 150);
+}
+nav {
+	z-index: 3;
+	top: 0;
+	position: sticky;
+	justify-content: space-between;
+	background: rgb(20, 80, 110);
+	align-items: center;
+	padding: 15px 20px;
+	display: flex;
+}
+.logo {
+	width: 220px;
+}
+.left-nav {
+	align-items: center;
+	display: flex;
+}
+.left-nav ul li {
+	display: inline-block;
+	list-style: none;
+}
+.left-nav ul li img {
+	margin: 10px;
+	width: 30px;
+}
+.Right-nav {
+	align-items: center;
+	display: flex;
+}
+.s-box {
+	padding: 0 15px;
+	align-items: center;
+	display: flex;
+	border-radius: 50px;
+	width: 400px;
+	background: #efefef;
+}
+.users-profile img {
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.s-box input {
+	border: 0;
+	padding: 12px;
+	background: transparent;
+	width: 100%;
+}
+.users-profile {
+	margin-left: 20px;
+}
+.online {
+	position: relative;
+}
+.offline {
+	position: relative;
+}
+.offline::after {
+	width: 8px;
+	height: 8px;
+	border: solid 2px #ffd;
+	border-radius: 50px;
+	background: red;
+	position: absolute;
+	bottom: 6px;
+	right: 0;
+	content: "";
+}
+.online::after {
+	width: 8px;
+	height: 8px;
+	border: solid 2px #ffd;
+	border-radius: 50px;
+	background: green;
+	position: absolute;
+	bottom: 6px;
+	right: 0;
+	content: "";
+}
+.container {
+	padding: 15px 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.sid-left {
+	align-self: flex-start;
+	top: 80px;
+	position: sticky; /* The element is positioned according to the normal flow of the document*/
+	flex-basis: 25%;
+}
+
+.sid-right {
+	align-self: flex-start;
+	top: 80px;
+	position: sticky;
+	flex-basis: 25%;
+}
+
+.main-content {
+	flex-basis: 60%; /*Size of flex item*/
+}
+.links a {
+	color: black;
+	margin-bottom: 25px;
+	width: fit-content; /* The box will use available space, but never more than max-content. */
+	align-items: center;
+	display: flex;
+	text-decoration: none;
+}
+.links a img {
+	width: 30px;
+
+	margin-right: 20px;
+}
+.links a:last-child {
+	color: rgb(20, 80, 110);
+}
+.links {
+	border-bottom: 2px solid #efefef;
+}
+.s-gallary {
+	margin-bottom: 20px;
+	justify-content: space-between;
+	display: flex;
+	width: 100%;
+}
+.story {
+	position: relative;
+	padding-top: 30%;
+	flex-basis: 20%;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url("./images/myProfilePhoto.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	border: rgb(20, 80, 110) solid 4px;
+	border-radius: 12px;
+}
+.story img {
+	position: absolute;
+	width: 50px;
+	border-radius: 50%;
+	top: 12px;
+	left: 12px;
+	border: 2px solid blue;
+}
+.story p {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	bottom: 10px;
+	color: white;
+	font-size: 15px;
+}
+.s2 {
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url("./images/status-2.png");
+} /*transparency*/
+.s3 {
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url("./images/status-3.png");
+}
+.s4 {
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), url("./images/status-4.png");
+}
+.s1:hover {
+	cursor: pointer;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2)), url("./images/myProfilePhoto.jpg");
+}
+.s2:hover {
+	cursor: pointer;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2)), url("./images/status-2.png");
+}
+.s3:hover {
+	cursor: pointer;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2)), url("./images/status-3.png");
+}
+.s4:hover {
+	cursor: pointer;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2)), url("./images/status-4.png");
+}
+h3 {
+	color: rgb(20, 80, 110);
+}
+.myModal {
+	display: none;
+	position: fixed;
+	z-index: 200;
+	top: 100px;
+	left: 300px;
+	width: 60%;
+	height: 60%;
+	border: 2px solid white;
+	border-radius: 20px;
+}
+.modal-content {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.modal-content button {
+	bottom: 10px;
+	width: 100px;
+	height: 30px;
+	position: relative;
+}
+.modalImg {
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 90%;
+	height: 90%;
+}
+.close {
+	height: 50px;
+	width: 300px;
+	z-index: 300;
+}
+button {
+	padding: 5px;
+	margin: 5px;
+	height: 30px;
+	color: #efefef;
+	font-size: medium;
+	background-color: rgb(20, 80, 110);
+	border: 1px solid white;
+	border-radius: 5px;
+}
+button:hover {
+	border: solid 1px rgb(20, 80, 110);
+	background-color: white;
+	color: rgb(20, 80, 110);
+	animation: btn-animation 0.60s;
+}
+button:active {
+	animation: btn-click 0.04s;
+}
+@keyframes btn-animation {
+	15%,
+	85% {
+		transform: translate3d(-1px, 0, 0);
+	}
+	25%,
+	75% {
+		transform: translate3d(2px, 0, 0);
+	}
+	30%,
+	70% {
+		transform: translate3d(-3px, 0, 0);
+	}
+	40%,
+	60% {
+		transform: translate3d(3px, 0, 0);
+	}
+}
+@keyframes btn-click {
+	20%,
+	80% {
+		transform: rotate(15deg);
+	}
+	40%,
+	60% {
+		transform: rotate(15deg);
+	}
+}
